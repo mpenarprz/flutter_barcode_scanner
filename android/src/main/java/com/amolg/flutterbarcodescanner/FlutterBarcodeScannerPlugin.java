@@ -146,7 +146,7 @@ public class FlutterBarcodeScannerPlugin implements MethodCallHandler, ActivityR
      */
     @Override
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
-        synchronized (pendingResult){
+        synchronized (TAG){
             if(pendingResult != null){
                 if (requestCode == RC_BARCODE_CAPTURE) {
                     if (resultCode == CommonStatusCodes.SUCCESS) {
